@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="hr_payslip_reporting" model="ir.actions.act_window">
+            <field name="name">Reporting</field>
+            <field name="res_model">hr.payslip.line</field>
+            <field name="view_mode">pivot,graph</field>
+        </record>
+
+        <!-- menu items -->
+        <menuitem id="menu_optipay_reporting"
+          name="Rapports"
+          parent="hr_work_entry_contract.menu_hr_payroll_root"
+          sequence="59"
+          groups="optipay_group_manager"/>
+
+          <menuitem
+          name="Cotisation Ipres"
+          id="payslip_lines_cotisation_ipres_value_menu_action"
+          action="payslip_lines_cotisation_ipres_value"
+          parent="optipay.menu_optipay_reporting"
+          sequence="1"/>
+
+          <menuitem
+          id="payslip_lines_securite_sociale_value_menu_action"
+          action="payslip_lines_securite_sociale_value"
+          parent="menu_optipay_reporting"
+          sequence="2"/>
+
+          <menuitem
+          id="launch_transfer_order_wizard_menu_action"
+          action="launch_transfer_order_wizard"
+          parent="menu_optipay_reporting"
+          sequence="3"/>
+
+          <menuitem
+          id="launch_declaration_retenues_menu_action"
+          action="launch_declaration_retenues"
+          parent="menu_optipay_reporting"
+          sequence="4"/>
+
+          <menuitem
+          id="reporting_menu_action"
+          action="hr_payslip_reporting"
+          parent="menu_optipay_reporting"
+          sequence="5"/>
+
+          <menuitem
+          id="dads_menu_action"
+          action="launch_dads_report_wizard"
+          parent="menu_optipay_reporting"
+          sequence="6"/>
+          
+    </data>
+</odoo>

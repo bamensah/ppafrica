@@ -1,0 +1,9 @@
+<odoo>
+    <data>
+        <record id="optipay_group_manager" model="res.groups">
+            <field name="name">Gestionnaire paie senegal</field>
+            <!--<field name="users" eval="[(4, ref('base.group_user'))]"/>-->
+            <field name="category_id" ref="base.module_category_hidden"/>
+        </record>
+    </data>
+</odoo>
